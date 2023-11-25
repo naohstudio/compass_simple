@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="200dp"
+        android:height="200dp"
+        android:viewportWidth="200"
+        android:viewportHeight="200">
+
+    <path
+        android:fillColor="@color/compassNorth"
+        android:pathData="M100,12 L96,18 L104,18 Z" />
+
+    <path
+        android:pathData="M100,17 L100,27"
+        android:strokeWidth="2"
+        android:strokeColor="@color/compassNorth" />
+
+</vector>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Base color-->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--    Background-->
+    <color name="bgPrimary">#FFFFFF</color>
+    <color name="bgSecondary">#C6C5C5</color>
+    <color name="bgShimmer">#777575</color>
+
+    <color name="bgDialog">#FDFDFD</color>
+
+    <!--    Text color-->
+    <color name="textPrimary">#000000</color>
+    <color name="textSecondary">#9A9A9A</color>
+
+    <!--    Button-->
+    <color name="bgButtonPrimary">#4040FF</color>
+    <color name="rippleButtonPrimary">#CACACE</color>
+
+    <!--    Tab layout-->
+    <color name="tabBgSelected">#3345F1</color>
+    <color name="tabBgUnselected">#E6E6E6</color>
+
+    <!--    Compass-->
+    <color name="compassNorth">#E91E1E</color>
+    <color name="compassDegreeSecond">#3E3B3B</color>
+    <color name="compassDegreeMain">#000000</color>
+
+
+</resources>

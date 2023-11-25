@@ -1,0 +1,24 @@
+<resources>
+    <!--    Border-->
+    <dimen name="border_dialog">@dimen/_12sdp</dimen>
+    <dimen name="border_button">@dimen/_24sdp</dimen>
+    <dimen name="border_tab">@dimen/_6sdp</dimen>
+    <dimen name="border_wallpaper_in_list">@dimen/_12sdp</dimen>
+
+    <!--    Margin-->
+    <dimen name="margin_dialog">@dimen/_28sdp</dimen>
+
+    <!--    Padding-->
+    <dimen name="padding_header">@dimen/_6sdp</dimen>
+
+    <dimen name="root_layout_padding">8dp</dimen>
+
+    <dimen name="cardinal_direction_text_ratio">0.20f</dimen>
+    <dimen name="degree_text_ratio">0.04f</dimen>
+
+    <dimen name="status_degrees_text_size_factor">0.14f</dimen>
+    <dimen name="status_direction_text_size_factor">0.055f</dimen>
+    <dimen name="direction_text_size_factor">0.08f</dimen>
+    <dimen name="degree_text_size_factor">0.03f</dimen>
+
+</resources>

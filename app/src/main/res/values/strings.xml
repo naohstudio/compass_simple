@@ -1,0 +1,45 @@
+<resources>
+
+    <!--    No translate-->
+    <string name="app_name" translatable="false">Compass</string>
+    <string name="rate_app" translatable="false">Rate app</string>
+
+    <string name="degree_0" translatable="false">0</string>
+    <string name="degree_30" translatable="false">30</string>
+    <string name="degree_60" translatable="false">60</string>
+    <string name="degree_90" translatable="false">90</string>
+    <string name="degree_120" translatable="false">120</string>
+    <string name="degree_150" translatable="false">150</string>
+    <string name="degree_180" translatable="false">180</string>
+    <string name="degree_210" translatable="false">210</string>
+    <string name="degree_240" translatable="false">240</string>
+    <string name="degree_270" translatable="false">270</string>
+    <string name="degree_300" translatable="false">300</string>
+    <string name="degree_330" translatable="false">330</string>
+
+    <string name="direction_north" translatable="false">N</string>
+    <string name="direction_east" translatable="false">E</string>
+    <string name="direction_south" translatable="false">S</string>
+    <string name="direction_west" translatable="false">W</string>
+
+    <!--    String with format-->
+    <string name="degrees" translatable="false">%1$d°</string>
+
+    <!--    String value-->
+    <string name="des_direction_north">North</string>
+    <string name="des_direction_northeast">Northeast</string>
+    <string name="des_direction_east">East</string>
+    <string name="des_direction_southeast">Southeast</string>
+    <string name="des_direction_south">South</string>
+    <string name="des_direction_southwest">Southwest</string>
+    <string name="des_direction_west">West</string>
+    <string name="des_direction_northwest">Northwest</string>
+
+    <string name="sensor_accuracy_no_contact">Sensor not available</string>
+    <string name="sensor_accuracy_unreliable">Sensor values are unreliable</string>
+    <string name="sensor_accuracy_low">Low accuracy</string>
+    <string name="sensor_accuracy_medium">Average accuracy</string>
+    <string name="sensor_accuracy_high">Maximum accuracy</string>
+
+
+</resources>

@@ -50,7 +50,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         } catch (ex: Exception) {
             Log.d(TAG, "initConfig: init sensor failed")
         }
-        
     }
 
     private fun initBanner() {

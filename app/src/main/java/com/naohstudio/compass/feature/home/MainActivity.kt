@@ -17,6 +17,7 @@ import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import com.naohstudio.compass.coreproject.base.BannerHelper
 import com.naohstudio.compass.coreproject.base.BaseActivity
+import com.naohstudio.compass.coreproject.base.GoogleMobileAdsConsentManager
 import com.naohstudio.compass.databinding.ActivityMainBinding
 import com.naohstudio.compass.feature.model.Coordinates
 import com.naohstudio.compass.feature.model.DisplayRotation
@@ -38,8 +39,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun initConfig(savedInstanceState: Bundle?) {
         super.initConfig(savedInstanceState)
-
-        initBanner()
+        val googleMobileAdsConsentManager = GoogleMobileAdsConsentManager.getInstance(this)
+        googleMobileAdsConsentManager.gatherConsent(this) {
+            initBanner()
+        }
         try {
             sensorManager = ActivityCompat.getSystemService(this@MainActivity, SensorManager::class.java)
             sensorManager?.let {

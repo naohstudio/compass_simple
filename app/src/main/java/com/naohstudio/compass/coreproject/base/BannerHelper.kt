@@ -17,7 +17,10 @@ class BannerHelper( private val activity: BaseActivity<*>) {
     var adSize: AdSize? = null
 
     fun loadBanner(binding: LayoutBannerAdBinding) {
-
+        if (!Ads.canRequestAds(activity)){
+            binding.root.gone()
+            return
+        }
         binding.root.visible()
         binding.shimmerFrameLayout.showShimmer(true)
 

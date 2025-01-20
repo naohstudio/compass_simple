@@ -1,5 +1,6 @@
 package com.naohstudio.compass.coreproject.base
 
+import android.content.Context
 import com.naohstudio.compass.BuildConfig
 
 
@@ -13,5 +14,9 @@ object Ads {
         } else {
             "ca-app-pub-9344348136193481/6093065829"
         }
+    }
+
+    fun canRequestAds(context: Context): Boolean {
+        return GoogleMobileAdsConsentManager.getInstance(context).canRequestAds
     }
 }

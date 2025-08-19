@@ -1,9 +1,11 @@
 package com.naohstudio.compass.coreproject.base
 
 import android.content.Context
+import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.WindowManager
 import androidx.lifecycle.lifecycleScope
+import com.google.ads.mediation.admob.AdMobAdapter
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
@@ -78,6 +80,10 @@ class BannerHelper( private val activity: BaseActivity<*>) {
         binding.shimmerFrameLayout.addView(adView)
         adView?.adUnitId = Ads.getBannerAds()
         adView?.setAdSize(adSize!!)
-        adView?.loadAd(AdRequest.Builder().build())
+
+        val extras = Bundle()
+        extras.putString("collapsible", "bottom")
+        val adRequest = AdRequest.Builder().addNetworkExtrasBundle(AdMobAdapter::class.java, extras)
+        adView?.loadAd(adRequest.build())
     }
 }

@@ -6,7 +6,7 @@ import com.naohstudio.compass.BuildConfig
 
 object Ads {
 
-    private const val BANNER_TEST_ADS = "ca-app-pub-3940256099942544/6300978111"
+    private const val BANNER_TEST_ADS = "ca-app-pub-3940256099942544/9214589741"
 
     fun getBannerAds(): String {
         return if (BuildConfig.DEBUG) {

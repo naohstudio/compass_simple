@@ -1,8 +1,19 @@
 <resources>
 
-    <!--    No translate-->
-    <string name="app_name" translatable="false">Compass</string>
-    <string name="rate_app" translatable="false">Rate app</string>
+    <!--    Translatable-->
+    <string name="app_name">Compass</string>
+    <string name="rate_app">Rate app</string>
+    <string name="calibrate_compass">Move your phone in a figure 8 to calibrate the compass</string>
+    <string name="compass_style_classic">Classic</string>
+    <string name="compass_style_dark">Dark Gold</string>
+    <string name="compass_style_nautical">Nautical</string>
+    <string name="compass_style_neon">Neon</string>
+    <string name="compass_style_forest">Forest</string>
+    <string name="compass_style_ocean">Ocean</string>
+    <string name="compass_style_sunset">Sunset</string>
+    <string name="compass_style_royal">Royal</string>
+    <string name="compass_style_military">Military</string>
+    <string name="compass_style_ice">Ice</string>
 
     <string name="degree_0" translatable="false">0</string>
     <string name="degree_30" translatable="false">30</string>
@@ -17,10 +28,10 @@
     <string name="degree_300" translatable="false">300</string>
     <string name="degree_330" translatable="false">330</string>
 
-    <string name="direction_north" translatable="false">N</string>
-    <string name="direction_east" translatable="false">E</string>
-    <string name="direction_south" translatable="false">S</string>
-    <string name="direction_west" translatable="false">W</string>
+    <string name="direction_north">N</string>
+    <string name="direction_east">E</string>
+    <string name="direction_south">S</string>
+    <string name="direction_west">W</string>
 
     <!--    String with format-->
     <string name="degrees" translatable="false">%1$d°</string>

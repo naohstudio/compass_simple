@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kompas</string>
+    <string name="rate_app">App beoordelen</string>
+    <string name="calibrate_compass">Beweeg je telefoon in de vorm van een 8 om het kompas te kalibreren</string>
+    <string name="compass_style_classic">Klassiek</string>
+    <string name="compass_style_dark">Donker goud</string>
+    <string name="compass_style_nautical">Nautisch</string>
+    <string name="compass_style_neon">Neon</string>
+    <string name="compass_style_forest">Bos</string>
+    <string name="compass_style_ocean">Oceaan</string>
+    <string name="compass_style_sunset">Zonsondergang</string>
+    <string name="compass_style_royal">Koninklijk</string>
+    <string name="compass_style_military">Militair</string>
+    <string name="compass_style_ice">IJs</string>
+    <string name="direction_north">N</string>
+    <string name="direction_east">O</string>
+    <string name="direction_south">Z</string>
+    <string name="direction_west">W</string>
+    <string name="des_direction_north">Noord</string>
+    <string name="des_direction_northeast">Noordoost</string>
+    <string name="des_direction_east">Oost</string>
+    <string name="des_direction_southeast">Zuidoost</string>
+    <string name="des_direction_south">Zuid</string>
+    <string name="des_direction_southwest">Zuidwest</string>
+    <string name="des_direction_west">West</string>
+    <string name="des_direction_northwest">Noordwest</string>
+    <string name="sensor_accuracy_no_contact">Sensor niet beschikbaar</string>
+    <string name="sensor_accuracy_unreliable">Sensorwaarden zijn onbetrouwbaar</string>
+    <string name="sensor_accuracy_low">Lage nauwkeurigheid</string>
+    <string name="sensor_accuracy_medium">Gemiddelde nauwkeurigheid</string>
+    <string name="sensor_accuracy_high">Maximale nauwkeurigheid</string>
+</resources>

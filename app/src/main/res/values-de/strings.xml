@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kompass</string>
+    <string name="rate_app">App bewerten</string>
+    <string name="calibrate_compass">Bewege dein Handy in Form einer 8, um den Kompass zu kalibrieren</string>
+    <string name="compass_style_classic">Klassisch</string>
+    <string name="compass_style_dark">Dunkelgold</string>
+    <string name="compass_style_nautical">Nautisch</string>
+    <string name="compass_style_neon">Neon</string>
+    <string name="compass_style_forest">Wald</string>
+    <string name="compass_style_ocean">Ozean</string>
+    <string name="compass_style_sunset">Sonnenuntergang</string>
+    <string name="compass_style_royal">Königlich</string>
+    <string name="compass_style_military">Militär</string>
+    <string name="compass_style_ice">Eis</string>
+    <string name="direction_north">N</string>
+    <string name="direction_east">O</string>
+    <string name="direction_south">S</string>
+    <string name="direction_west">W</string>
+    <string name="des_direction_north">Norden</string>
+    <string name="des_direction_northeast">Nordosten</string>
+    <string name="des_direction_east">Osten</string>
+    <string name="des_direction_southeast">Südosten</string>
+    <string name="des_direction_south">Süden</string>
+    <string name="des_direction_southwest">Südwesten</string>
+    <string name="des_direction_west">Westen</string>
+    <string name="des_direction_northwest">Nordwesten</string>
+    <string name="sensor_accuracy_no_contact">Sensor nicht verfügbar</string>
+    <string name="sensor_accuracy_unreliable">Sensorwerte sind unzuverlässig</string>
+    <string name="sensor_accuracy_low">Geringe Genauigkeit</string>
+    <string name="sensor_accuracy_medium">Mittlere Genauigkeit</string>
+    <string name="sensor_accuracy_high">Maximale Genauigkeit</string>
+</resources>

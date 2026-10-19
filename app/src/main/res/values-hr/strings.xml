@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kompas</string>
+    <string name="rate_app">Ocijeni aplikaciju</string>
+    <string name="calibrate_compass">Pomičite telefon u obliku broja 8 kako biste kalibrirali kompas</string>
+    <string name="compass_style_classic">Klasični</string>
+    <string name="compass_style_dark">Tamno zlato</string>
+    <string name="compass_style_nautical">Nautički</string>
+    <string name="compass_style_neon">Neon</string>
+    <string name="compass_style_forest">Šuma</string>
+    <string name="compass_style_ocean">Ocean</string>
+    <string name="compass_style_sunset">Zalazak sunca</string>
+    <string name="compass_style_royal">Kraljevski</string>
+    <string name="compass_style_military">Vojni</string>
+    <string name="compass_style_ice">Led</string>
+    <string name="direction_north">S</string>
+    <string name="direction_east">I</string>
+    <string name="direction_south">J</string>
+    <string name="direction_west">Z</string>
+    <string name="des_direction_north">Sjever</string>
+    <string name="des_direction_northeast">Sjeveroistok</string>
+    <string name="des_direction_east">Istok</string>
+    <string name="des_direction_southeast">Jugoistok</string>
+    <string name="des_direction_south">Jug</string>
+    <string name="des_direction_southwest">Jugozapad</string>
+    <string name="des_direction_west">Zapad</string>
+    <string name="des_direction_northwest">Sjeverozapad</string>
+    <string name="sensor_accuracy_no_contact">Senzor nije dostupan</string>
+    <string name="sensor_accuracy_unreliable">Vrijednosti senzora nisu pouzdane</string>
+    <string name="sensor_accuracy_low">Niska preciznost</string>
+    <string name="sensor_accuracy_medium">Srednja preciznost</string>
+    <string name="sensor_accuracy_high">Najveća preciznost</string>
+</resources>

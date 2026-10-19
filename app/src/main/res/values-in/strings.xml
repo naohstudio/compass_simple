@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kompas</string>
+    <string name="rate_app">Beri rating aplikasi</string>
+    <string name="calibrate_compass">Gerakkan ponsel membentuk angka 8 untuk mengkalibrasi kompas</string>
+    <string name="compass_style_classic">Klasik</string>
+    <string name="compass_style_dark">Emas Gelap</string>
+    <string name="compass_style_nautical">Bahari</string>
+    <string name="compass_style_neon">Neon</string>
+    <string name="compass_style_forest">Hutan</string>
+    <string name="compass_style_ocean">Samudra</string>
+    <string name="compass_style_sunset">Senja</string>
+    <string name="compass_style_royal">Kerajaan</string>
+    <string name="compass_style_military">Militer</string>
+    <string name="compass_style_ice">Es</string>
+    <string name="direction_north">U</string>
+    <string name="direction_east">T</string>
+    <string name="direction_south">S</string>
+    <string name="direction_west">B</string>
+    <string name="des_direction_north">Utara</string>
+    <string name="des_direction_northeast">Timur Laut</string>
+    <string name="des_direction_east">Timur</string>
+    <string name="des_direction_southeast">Tenggara</string>
+    <string name="des_direction_south">Selatan</string>
+    <string name="des_direction_southwest">Barat Daya</string>
+    <string name="des_direction_west">Barat</string>
+    <string name="des_direction_northwest">Barat Laut</string>
+    <string name="sensor_accuracy_no_contact">Sensor tidak tersedia</string>
+    <string name="sensor_accuracy_unreliable">Nilai sensor tidak dapat diandalkan</string>
+    <string name="sensor_accuracy_low">Akurasi rendah</string>
+    <string name="sensor_accuracy_medium">Akurasi sedang</string>
+    <string name="sensor_accuracy_high">Akurasi maksimal</string>
+</resources>

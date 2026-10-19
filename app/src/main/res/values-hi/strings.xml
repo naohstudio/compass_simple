@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">कम्पास</string>
+    <string name="rate_app">ऐप को रेटिंग दें</string>
+    <string name="calibrate_compass">कम्पास को कैलिब्रेट करने के लिए फ़ोन को 8 के आकार में घुमाएँ</string>
+    <string name="compass_style_classic">क्लासिक</string>
+    <string name="compass_style_dark">डार्क गोल्ड</string>
+    <string name="compass_style_nautical">समुद्री</string>
+    <string name="compass_style_neon">नियॉन</string>
+    <string name="compass_style_forest">जंगल</string>
+    <string name="compass_style_ocean">महासागर</string>
+    <string name="compass_style_sunset">सूर्यास्त</string>
+    <string name="compass_style_royal">शाही</string>
+    <string name="compass_style_military">सैन्य</string>
+    <string name="compass_style_ice">बर्फ़</string>
+    <string name="direction_north">उ</string>
+    <string name="direction_east">पू</string>
+    <string name="direction_south">द</string>
+    <string name="direction_west">प</string>
+    <string name="des_direction_north">उत्तर</string>
+    <string name="des_direction_northeast">उत्तर-पूर्व</string>
+    <string name="des_direction_east">पूर्व</string>
+    <string name="des_direction_southeast">दक्षिण-पूर्व</string>
+    <string name="des_direction_south">दक्षिण</string>
+    <string name="des_direction_southwest">दक्षिण-पश्चिम</string>
+    <string name="des_direction_west">पश्चिम</string>
+    <string name="des_direction_northwest">उत्तर-पश्चिम</string>
+    <string name="sensor_accuracy_no_contact">सेंसर उपलब्ध नहीं है</string>
+    <string name="sensor_accuracy_unreliable">सेंसर के मान विश्वसनीय नहीं हैं</string>
+    <string name="sensor_accuracy_low">कम सटीकता</string>
+    <string name="sensor_accuracy_medium">मध्यम सटीकता</string>
+    <string name="sensor_accuracy_high">अधिकतम सटीकता</string>
+</resources>

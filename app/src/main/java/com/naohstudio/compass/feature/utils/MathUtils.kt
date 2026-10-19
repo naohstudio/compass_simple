@@ -4,6 +4,8 @@ import android.hardware.SensorManager
 import com.naohstudio.compass.feature.model.Coordinates
 import com.naohstudio.compass.feature.model.DisplayRotation
 import com.naohstudio.compass.feature.model.RotationVector
+import kotlin.math.atan2
+import kotlin.math.hypot
 import kotlin.math.roundToInt
 
 object MathUtils {
@@ -12,8 +14,34 @@ object MathUtils {
     private const val AXIS_SIZE = 3
     private const val ROTATION_MATRIX_SIZE = 9
 
+    /**
+     * Heading like the iOS compass: the direction the top of the screen points when the phone
+     * lies flat, and the direction the back camera points when the phone is held upright.
+     * Using getOrientation() alone breaks down when the phone is upright (gimbal lock).
+     */
     @JvmStatic
     fun calculateCoordinates(rotationVector: RotationVector, displayRotation: DisplayRotation): Coordinates {
+        val rotationMatrix = getRotationMatrix(rotationVector)
+        val r = remapRotationMatrix(rotationMatrix, displayRotation)
+
+        // Rows of r are the world East / North / Up components of the device X, Y, Z axes
+        val topHorizontal = hypot(r[1], r[4])
+        val backHorizontal = hypot(r[2], r[5])
+        val athInRadians = if (topHorizontal >= backHorizontal) {
+            atan2(r[1], r[4])
+        } else {
+            atan2(-r[2], -r[5])
+        }
+        val athInDegrees = Math.toDegrees(athInRadians.toDouble()).toFloat()
+        return Coordinates(athInDegrees)
+    }
+
+    /**
+     * Original calculation: magnetic azimuth from getOrientation(), used when the location
+     * (and therefore true north) is not available.
+     */
+    @JvmStatic
+    fun calculateLegacyCoordinates(rotationVector: RotationVector, displayRotation: DisplayRotation): Coordinates {
         val rotationMatrix = getRotationMatrix(rotationVector)
         val remappedRotationMatrix = remapRotationMatrix(rotationMatrix, displayRotation)
         val orientationInRadians = SensorManager.getOrientation(remappedRotationMatrix, FloatArray(AXIS_SIZE))
@@ -24,7 +52,7 @@ object MathUtils {
 
     private fun getRotationMatrix(rotationVector: RotationVector): FloatArray {
         val rotationMatrix = FloatArray(ROTATION_MATRIX_SIZE)
-        SensorManager.getRotationMatrixFromVector(rotationMatrix, rotationVector.toArray())
+        SensorManager.getRotationMatrixFromVector(rotationMatrix, rotationVector.values)
         return rotationMatrix
     }
 

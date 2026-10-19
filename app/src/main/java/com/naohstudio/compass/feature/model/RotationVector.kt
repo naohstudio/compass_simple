@@ -1,6 +1,7 @@
 package com.naohstudio.compass.feature.model
 
-data class RotationVector(val x: Float, val y: Float, val z: Float) {
+class RotationVector(values: FloatArray) {
 
-    fun toArray(): FloatArray = floatArrayOf(x, y, z)
+    // Keep all components (x, y, z and the scalar w when present) for a precise rotation matrix
+    val values: FloatArray = values.copyOf(minOf(values.size, 5))
 }

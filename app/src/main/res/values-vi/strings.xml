@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">La bàn</string>
+    <string name="rate_app">Đánh giá ứng dụng</string>
+    <string name="calibrate_compass">Di chuyển điện thoại theo hình số 8 để hiệu chỉnh la bàn</string>
+    <string name="compass_style_classic">Cổ điển</string>
+    <string name="compass_style_dark">Vàng tối</string>
+    <string name="compass_style_nautical">Hải trình</string>
+    <string name="compass_style_neon">Neon</string>
+    <string name="compass_style_forest">Rừng xanh</string>
+    <string name="compass_style_ocean">Đại dương</string>
+    <string name="compass_style_sunset">Hoàng hôn</string>
+    <string name="compass_style_royal">Hoàng gia</string>
+    <string name="compass_style_military">Quân đội</string>
+    <string name="compass_style_ice">Băng giá</string>
+    <string name="direction_north">B</string>
+    <string name="direction_east">Đ</string>
+    <string name="direction_south">N</string>
+    <string name="direction_west">T</string>
+    <string name="des_direction_north">Bắc</string>
+    <string name="des_direction_northeast">Đông Bắc</string>
+    <string name="des_direction_east">Đông</string>
+    <string name="des_direction_southeast">Đông Nam</string>
+    <string name="des_direction_south">Nam</string>
+    <string name="des_direction_southwest">Tây Nam</string>
+    <string name="des_direction_west">Tây</string>
+    <string name="des_direction_northwest">Tây Bắc</string>
+    <string name="sensor_accuracy_no_contact">Cảm biến không khả dụng</string>
+    <string name="sensor_accuracy_unreliable">Giá trị cảm biến không đáng tin cậy</string>
+    <string name="sensor_accuracy_low">Độ chính xác thấp</string>
+    <string name="sensor_accuracy_medium">Độ chính xác trung bình</string>
+    <string name="sensor_accuracy_high">Độ chính xác tối đa</string>
+</resources>

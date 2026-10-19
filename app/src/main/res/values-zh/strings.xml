@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">指南针</string>
+    <string name="rate_app">为应用评分</string>
+    <string name="calibrate_compass">请将手机按 8 字形移动以校准指南针</string>
+    <string name="compass_style_classic">经典</string>
+    <string name="compass_style_dark">暗金</string>
+    <string name="compass_style_nautical">航海</string>
+    <string name="compass_style_neon">霓虹</string>
+    <string name="compass_style_forest">森林</string>
+    <string name="compass_style_ocean">海洋</string>
+    <string name="compass_style_sunset">日落</string>
+    <string name="compass_style_royal">皇家</string>
+    <string name="compass_style_military">军事</string>
+    <string name="compass_style_ice">冰雪</string>
+    <string name="direction_north">北</string>
+    <string name="direction_east">东</string>
+    <string name="direction_south">南</string>
+    <string name="direction_west">西</string>
+    <string name="des_direction_north">北</string>
+    <string name="des_direction_northeast">东北</string>
+    <string name="des_direction_east">东</string>
+    <string name="des_direction_southeast">东南</string>
+    <string name="des_direction_south">南</string>
+    <string name="des_direction_southwest">西南</string>
+    <string name="des_direction_west">西</string>
+    <string name="des_direction_northwest">西北</string>
+    <string name="sensor_accuracy_no_contact">传感器不可用</string>
+    <string name="sensor_accuracy_unreliable">传感器数值不可靠</string>
+    <string name="sensor_accuracy_low">精度低</string>
+    <string name="sensor_accuracy_medium">精度中等</string>
+    <string name="sensor_accuracy_high">精度最高</string>
+</resources>

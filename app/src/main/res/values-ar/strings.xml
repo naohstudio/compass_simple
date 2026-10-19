@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">البوصلة</string>
+    <string name="rate_app">قيّم التطبيق</string>
+    <string name="calibrate_compass">حرّك هاتفك على شكل الرقم 8 لمعايرة البوصلة</string>
+    <string name="compass_style_classic">كلاسيكي</string>
+    <string name="compass_style_dark">ذهبي داكن</string>
+    <string name="compass_style_nautical">بحري</string>
+    <string name="compass_style_neon">نيون</string>
+    <string name="compass_style_forest">غابة</string>
+    <string name="compass_style_ocean">محيط</string>
+    <string name="compass_style_sunset">غروب</string>
+    <string name="compass_style_royal">ملكي</string>
+    <string name="compass_style_military">عسكري</string>
+    <string name="compass_style_ice">جليد</string>
+    <string name="direction_north">ش</string>
+    <string name="direction_east">ق</string>
+    <string name="direction_south">ج</string>
+    <string name="direction_west">غ</string>
+    <string name="des_direction_north">شمال</string>
+    <string name="des_direction_northeast">شمال شرق</string>
+    <string name="des_direction_east">شرق</string>
+    <string name="des_direction_southeast">جنوب شرق</string>
+    <string name="des_direction_south">جنوب</string>
+    <string name="des_direction_southwest">جنوب غرب</string>
+    <string name="des_direction_west">غرب</string>
+    <string name="des_direction_northwest">شمال غرب</string>
+    <string name="sensor_accuracy_no_contact">المستشعر غير متاح</string>
+    <string name="sensor_accuracy_unreliable">قيم المستشعر غير موثوقة</string>
+    <string name="sensor_accuracy_low">دقة منخفضة</string>
+    <string name="sensor_accuracy_medium">دقة متوسطة</string>
+    <string name="sensor_accuracy_high">أعلى دقة</string>
+</resources>

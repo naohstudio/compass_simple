@@ -1,6 +1,7 @@
 package com.naohstudio.compass.feature.view
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.util.TypedValue.COMPLEX_UNIT_PX
@@ -12,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import com.naohstudio.compass.R
 import com.naohstudio.compass.databinding.CompassViewBinding
+import com.naohstudio.compass.feature.model.CompassStyle
 import com.naohstudio.compass.feature.model.Coordinates
 import com.naohstudio.compass.feature.utils.MathUtils
 
@@ -32,6 +34,25 @@ class CompassView(context: Context, attributes: AttributeSet) : ConstraintLayout
     init {
         val layoutInflater = LayoutInflater.from(context)
         binding = CompassViewBinding.inflate(layoutInflater, this, true)
+    }
+
+    private val compassTexts = with(binding) {
+        listOf(
+            statusDegreesText, statusCardinalDirectionText,
+            cardinalDirectionNorthText, cardinalDirectionEastText, cardinalDirectionSouthText, cardinalDirectionWestText,
+            degree0Text, degree30Text, degree60Text, degree90Text, degree120Text, degree150Text,
+            degree180Text, degree210Text, degree240Text, degree270Text, degree300Text, degree330Text
+        )
+    }
+
+    private val defaultTextColors: List<ColorStateList> = compassTexts.map { it.textColors }
+
+    fun setCompassStyle(style: CompassStyle) {
+        binding.imgCompass.setImageResource(style.backgroundResId)
+        compassTexts.forEachIndexed { index, textView ->
+            val color = style.roseTextColor
+            if (color != null) textView.setTextColor(color) else textView.setTextColor(defaultTextColors[index])
+        }
     }
 
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {

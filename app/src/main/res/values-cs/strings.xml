@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kompas</string>
+    <string name="rate_app">Ohodnotit aplikaci</string>
+    <string name="calibrate_compass">Pohybujte telefonem do tvaru osmičky pro kalibraci kompasu</string>
+    <string name="compass_style_classic">Klasický</string>
+    <string name="compass_style_dark">Tmavé zlato</string>
+    <string name="compass_style_nautical">Námořní</string>
+    <string name="compass_style_neon">Neon</string>
+    <string name="compass_style_forest">Les</string>
+    <string name="compass_style_ocean">Oceán</string>
+    <string name="compass_style_sunset">Západ slunce</string>
+    <string name="compass_style_royal">Královský</string>
+    <string name="compass_style_military">Vojenský</string>
+    <string name="compass_style_ice">Led</string>
+    <string name="direction_north">S</string>
+    <string name="direction_east">V</string>
+    <string name="direction_south">J</string>
+    <string name="direction_west">Z</string>
+    <string name="des_direction_north">Sever</string>
+    <string name="des_direction_northeast">Severovýchod</string>
+    <string name="des_direction_east">Východ</string>
+    <string name="des_direction_southeast">Jihovýchod</string>
+    <string name="des_direction_south">Jih</string>
+    <string name="des_direction_southwest">Jihozápad</string>
+    <string name="des_direction_west">Západ</string>
+    <string name="des_direction_northwest">Severozápad</string>
+    <string name="sensor_accuracy_no_contact">Senzor není k dispozici</string>
+    <string name="sensor_accuracy_unreliable">Hodnoty senzoru jsou nespolehlivé</string>
+    <string name="sensor_accuracy_low">Nízká přesnost</string>
+    <string name="sensor_accuracy_medium">Střední přesnost</string>
+    <string name="sensor_accuracy_high">Maximální přesnost</string>
+</resources>

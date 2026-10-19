@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">나침반</string>
+    <string name="rate_app">앱 평가하기</string>
+    <string name="calibrate_compass">나침반을 보정하려면 휴대폰을 8자 모양으로 움직이세요</string>
+    <string name="compass_style_classic">클래식</string>
+    <string name="compass_style_dark">다크 골드</string>
+    <string name="compass_style_nautical">항해</string>
+    <string name="compass_style_neon">네온</string>
+    <string name="compass_style_forest">숲</string>
+    <string name="compass_style_ocean">바다</string>
+    <string name="compass_style_sunset">노을</string>
+    <string name="compass_style_royal">로열</string>
+    <string name="compass_style_military">밀리터리</string>
+    <string name="compass_style_ice">얼음</string>
+    <string name="direction_north">북</string>
+    <string name="direction_east">동</string>
+    <string name="direction_south">남</string>
+    <string name="direction_west">서</string>
+    <string name="des_direction_north">북쪽</string>
+    <string name="des_direction_northeast">북동쪽</string>
+    <string name="des_direction_east">동쪽</string>
+    <string name="des_direction_southeast">남동쪽</string>
+    <string name="des_direction_south">남쪽</string>
+    <string name="des_direction_southwest">남서쪽</string>
+    <string name="des_direction_west">서쪽</string>
+    <string name="des_direction_northwest">북서쪽</string>
+    <string name="sensor_accuracy_no_contact">센서를 사용할 수 없습니다</string>
+    <string name="sensor_accuracy_unreliable">센서 값을 신뢰할 수 없습니다</string>
+    <string name="sensor_accuracy_low">낮은 정확도</string>
+    <string name="sensor_accuracy_medium">보통 정확도</string>
+    <string name="sensor_accuracy_high">최고 정확도</string>
+</resources>

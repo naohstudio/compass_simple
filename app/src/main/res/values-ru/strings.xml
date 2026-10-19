@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Компас</string>
+    <string name="rate_app">Оценить приложение</string>
+    <string name="calibrate_compass">Двигайте телефон восьмёркой, чтобы откалибровать компас</string>
+    <string name="compass_style_classic">Классика</string>
+    <string name="compass_style_dark">Тёмное золото</string>
+    <string name="compass_style_nautical">Морской</string>
+    <string name="compass_style_neon">Неон</string>
+    <string name="compass_style_forest">Лес</string>
+    <string name="compass_style_ocean">Океан</string>
+    <string name="compass_style_sunset">Закат</string>
+    <string name="compass_style_royal">Королевский</string>
+    <string name="compass_style_military">Военный</string>
+    <string name="compass_style_ice">Лёд</string>
+    <string name="direction_north">С</string>
+    <string name="direction_east">В</string>
+    <string name="direction_south">Ю</string>
+    <string name="direction_west">З</string>
+    <string name="des_direction_north">Север</string>
+    <string name="des_direction_northeast">Северо-восток</string>
+    <string name="des_direction_east">Восток</string>
+    <string name="des_direction_southeast">Юго-восток</string>
+    <string name="des_direction_south">Юг</string>
+    <string name="des_direction_southwest">Юго-запад</string>
+    <string name="des_direction_west">Запад</string>
+    <string name="des_direction_northwest">Северо-запад</string>
+    <string name="sensor_accuracy_no_contact">Датчик недоступен</string>
+    <string name="sensor_accuracy_unreliable">Показания датчика ненадёжны</string>
+    <string name="sensor_accuracy_low">Низкая точность</string>
+    <string name="sensor_accuracy_medium">Средняя точность</string>
+    <string name="sensor_accuracy_high">Максимальная точность</string>
+</resources>

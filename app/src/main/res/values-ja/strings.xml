@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">コンパス</string>
+    <string name="rate_app">アプリを評価</string>
+    <string name="calibrate_compass">コンパスを調整するには、スマートフォンを8の字に動かしてください</string>
+    <string name="compass_style_classic">クラシック</string>
+    <string name="compass_style_dark">ダークゴールド</string>
+    <string name="compass_style_nautical">ノーティカル</string>
+    <string name="compass_style_neon">ネオン</string>
+    <string name="compass_style_forest">フォレスト</string>
+    <string name="compass_style_ocean">オーシャン</string>
+    <string name="compass_style_sunset">サンセット</string>
+    <string name="compass_style_royal">ロイヤル</string>
+    <string name="compass_style_military">ミリタリー</string>
+    <string name="compass_style_ice">アイス</string>
+    <string name="direction_north">北</string>
+    <string name="direction_east">東</string>
+    <string name="direction_south">南</string>
+    <string name="direction_west">西</string>
+    <string name="des_direction_north">北</string>
+    <string name="des_direction_northeast">北東</string>
+    <string name="des_direction_east">東</string>
+    <string name="des_direction_southeast">南東</string>
+    <string name="des_direction_south">南</string>
+    <string name="des_direction_southwest">南西</string>
+    <string name="des_direction_west">西</string>
+    <string name="des_direction_northwest">北西</string>
+    <string name="sensor_accuracy_no_contact">センサーを利用できません</string>
+    <string name="sensor_accuracy_unreliable">センサーの値が不安定です</string>
+    <string name="sensor_accuracy_low">精度: 低</string>
+    <string name="sensor_accuracy_medium">精度: 中</string>
+    <string name="sensor_accuracy_high">精度: 最高</string>
+</resources>

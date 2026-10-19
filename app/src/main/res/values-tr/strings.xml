@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pusula</string>
+    <string name="rate_app">Uygulamayı değerlendir</string>
+    <string name="calibrate_compass">Pusulayı kalibre etmek için telefonunuzu 8 şeklinde hareket ettirin</string>
+    <string name="compass_style_classic">Klasik</string>
+    <string name="compass_style_dark">Koyu Altın</string>
+    <string name="compass_style_nautical">Denizci</string>
+    <string name="compass_style_neon">Neon</string>
+    <string name="compass_style_forest">Orman</string>
+    <string name="compass_style_ocean">Okyanus</string>
+    <string name="compass_style_sunset">Gün Batımı</string>
+    <string name="compass_style_royal">Kraliyet</string>
+    <string name="compass_style_military">Askeri</string>
+    <string name="compass_style_ice">Buz</string>
+    <string name="direction_north">K</string>
+    <string name="direction_east">D</string>
+    <string name="direction_south">G</string>
+    <string name="direction_west">B</string>
+    <string name="des_direction_north">Kuzey</string>
+    <string name="des_direction_northeast">Kuzeydoğu</string>
+    <string name="des_direction_east">Doğu</string>
+    <string name="des_direction_southeast">Güneydoğu</string>
+    <string name="des_direction_south">Güney</string>
+    <string name="des_direction_southwest">Güneybatı</string>
+    <string name="des_direction_west">Batı</string>
+    <string name="des_direction_northwest">Kuzeybatı</string>
+    <string name="sensor_accuracy_no_contact">Sensör kullanılamıyor</string>
+    <string name="sensor_accuracy_unreliable">Sensör değerleri güvenilir değil</string>
+    <string name="sensor_accuracy_low">Düşük doğruluk</string>
+    <string name="sensor_accuracy_medium">Orta doğruluk</string>
+    <string name="sensor_accuracy_high">En yüksek doğruluk</string>
+</resources>

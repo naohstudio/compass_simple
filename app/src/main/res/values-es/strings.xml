@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Brújula</string>
+    <string name="rate_app">Valorar app</string>
+    <string name="calibrate_compass">Mueve el teléfono formando un 8 para calibrar la brújula</string>
+    <string name="compass_style_classic">Clásico</string>
+    <string name="compass_style_dark">Oro oscuro</string>
+    <string name="compass_style_nautical">Náutico</string>
+    <string name="compass_style_neon">Neón</string>
+    <string name="compass_style_forest">Bosque</string>
+    <string name="compass_style_ocean">Océano</string>
+    <string name="compass_style_sunset">Atardecer</string>
+    <string name="compass_style_royal">Real</string>
+    <string name="compass_style_military">Militar</string>
+    <string name="compass_style_ice">Hielo</string>
+    <string name="direction_north">N</string>
+    <string name="direction_east">E</string>
+    <string name="direction_south">S</string>
+    <string name="direction_west">O</string>
+    <string name="des_direction_north">Norte</string>
+    <string name="des_direction_northeast">Noreste</string>
+    <string name="des_direction_east">Este</string>
+    <string name="des_direction_southeast">Sureste</string>
+    <string name="des_direction_south">Sur</string>
+    <string name="des_direction_southwest">Suroeste</string>
+    <string name="des_direction_west">Oeste</string>
+    <string name="des_direction_northwest">Noroeste</string>
+    <string name="sensor_accuracy_no_contact">Sensor no disponible</string>
+    <string name="sensor_accuracy_unreliable">Los valores del sensor no son fiables</string>
+    <string name="sensor_accuracy_low">Precisión baja</string>
+    <string name="sensor_accuracy_medium">Precisión media</string>
+    <string name="sensor_accuracy_high">Precisión máxima</string>
+</resources>

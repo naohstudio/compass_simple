@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kompass</string>
+    <string name="rate_app">Betygsätt appen</string>
+    <string name="calibrate_compass">Rör telefonen i en åtta för att kalibrera kompassen</string>
+    <string name="compass_style_classic">Klassisk</string>
+    <string name="compass_style_dark">Mörkt guld</string>
+    <string name="compass_style_nautical">Nautisk</string>
+    <string name="compass_style_neon">Neon</string>
+    <string name="compass_style_forest">Skog</string>
+    <string name="compass_style_ocean">Hav</string>
+    <string name="compass_style_sunset">Solnedgång</string>
+    <string name="compass_style_royal">Kunglig</string>
+    <string name="compass_style_military">Militär</string>
+    <string name="compass_style_ice">Is</string>
+    <string name="direction_north">N</string>
+    <string name="direction_east">Ö</string>
+    <string name="direction_south">S</string>
+    <string name="direction_west">V</string>
+    <string name="des_direction_north">Norr</string>
+    <string name="des_direction_northeast">Nordost</string>
+    <string name="des_direction_east">Öster</string>
+    <string name="des_direction_southeast">Sydost</string>
+    <string name="des_direction_south">Söder</string>
+    <string name="des_direction_southwest">Sydväst</string>
+    <string name="des_direction_west">Väster</string>
+    <string name="des_direction_northwest">Nordväst</string>
+    <string name="sensor_accuracy_no_contact">Sensorn är inte tillgänglig</string>
+    <string name="sensor_accuracy_unreliable">Sensorvärdena är opålitliga</string>
+    <string name="sensor_accuracy_low">Låg noggrannhet</string>
+    <string name="sensor_accuracy_medium">Medelhög noggrannhet</string>
+    <string name="sensor_accuracy_high">Maximal noggrannhet</string>
+</resources>

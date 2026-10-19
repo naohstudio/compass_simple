@@ -14,16 +14,8 @@ class Coordinates(degree: Float) {
 
     val roundedDegrees = normalizeAngle(degree.roundToInt().toFloat()).toInt()
 
-    val descriptionDirection: DescriptionDirection = when (degrees) {
-        in 22.5f .. 67.5f -> DescriptionDirection.NORTHEAST
-        in 67.6f .. 112.5f -> DescriptionDirection.EAST
-        in 112.6f .. 157.5f -> DescriptionDirection.SOUTHEAST
-        in 157.6f .. 202.5f -> DescriptionDirection.SOUTH
-        in 202.6f .. 247.5f -> DescriptionDirection.SOUTHWEST
-        in 247.6f .. 292.5f -> DescriptionDirection.WEST
-        in 292.6f .. 337.5f -> DescriptionDirection.NORTHWEST
-        else -> DescriptionDirection.NORTH
-    }
+    val descriptionDirection: DescriptionDirection =
+        DescriptionDirection.values()[((degrees + 22.5f) / 45f).toInt() % 8]
 
     private fun normalizeAngle(angleInDegrees: Float): Float {
         return (angleInDegrees + 360f) % 360f

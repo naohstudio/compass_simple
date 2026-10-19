@@ -13,8 +13,8 @@ android {
         applicationId = "com.naohstudio.compassfree"
         minSdk = 23
         targetSdk = 36
-        versionCode = 13
-        versionName = "1.0.13"
+        versionCode = 114
+        versionName = "1.1.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 

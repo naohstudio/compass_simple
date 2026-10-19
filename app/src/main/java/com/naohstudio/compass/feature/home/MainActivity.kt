@@ -13,13 +13,17 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Display
 import android.view.Surface
+import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.core.app.ActivityCompat
 import com.naohstudio.compass.coreproject.base.BannerHelper
 import com.naohstudio.compass.coreproject.base.BaseActivity
 import com.naohstudio.compass.coreproject.base.GoogleMobileAdsConsentManager
+import com.naohstudio.compass.R
 import com.naohstudio.compass.databinding.ActivityMainBinding
-import com.naohstudio.compass.feature.model.Coordinates
+import com.naohstudio.compass.feature.home.adapter.CompassStyleAdapter
+import com.naohstudio.compass.feature.model.CompassStyle
 import com.naohstudio.compass.feature.model.DisplayRotation
 import com.naohstudio.compass.feature.model.RotationVector
 import com.naohstudio.compass.feature.utils.MathUtils
@@ -37,22 +41,39 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private val compassSensorEventListener = CompassSensorEventListener()
 
+    private var calibrationHintShown = false
+
+    private val compassStyleAdapter = CompassStyleAdapter { style ->
+        saveCompassStyle(style)
+        binding.compass.setCompassStyle(style)
+    }
+
     override fun initConfig(savedInstanceState: Bundle?) {
         super.initConfig(savedInstanceState)
+        initCompassStyle()
         val googleMobileAdsConsentManager = GoogleMobileAdsConsentManager.getInstance(this)
         googleMobileAdsConsentManager.gatherConsent(this) {
             initBanner()
         }
         try {
             sensorManager = ActivityCompat.getSystemService(this@MainActivity, SensorManager::class.java)
-            sensorManager?.let {
-                it.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)?.also {sensor->
-                    registerSensorListener(it, sensor)
-                }
-            }
         } catch (ex: Exception) {
             Log.d(TAG, "initConfig: init sensor failed")
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        sensorManager?.let {
+            it.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)?.also { sensor ->
+                registerSensorListener(it, sensor)
+            }
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        sensorManager?.unregisterListener(compassSensorEventListener)
     }
 
     private fun initBanner() {
@@ -74,6 +95,28 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.btnRate.setOnClickListener {
             linkAppStore()
         }
+    }
+
+    private fun initCompassStyle() {
+        val savedStyle = getSavedCompassStyle()
+        binding.compass.setCompassStyle(savedStyle)
+        compassStyleAdapter.setSelected(savedStyle)
+        binding.rvCompassStyle.adapter = compassStyleAdapter
+        binding.rvCompassStyle.post {
+            val layoutManager = binding.rvCompassStyle.layoutManager as? LinearLayoutManager ?: return@post
+            val itemWidth = binding.rvCompassStyle.getChildAt(0)?.width ?: 0
+            val offset = (binding.rvCompassStyle.width - itemWidth) / 2
+            layoutManager.scrollToPositionWithOffset(compassStyleAdapter.positionOf(savedStyle), offset)
+        }
+    }
+
+    private fun getSavedCompassStyle(): CompassStyle {
+        val prefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        return CompassStyle.fromName(prefs.getString(KEY_COMPASS_STYLE, null))
+    }
+
+    private fun saveCompassStyle(style: CompassStyle) {
+        getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE).edit().putString(KEY_COMPASS_STYLE, style.name).apply()
     }
 
     private fun linkAppStore() {
@@ -102,7 +145,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         val success = sensorManager.registerListener(
             compassSensorEventListener,
             rotationVectorSensor,
-            SensorManager.SENSOR_DELAY_FASTEST
+            SensorManager.SENSOR_DELAY_GAME
         )
         if (success) {
             Log.d(TAG, "Registered listener for rotation vector sensor")
@@ -114,8 +157,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private inner class CompassSensorEventListener : SensorEventListener {
 
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
-            when (sensor.type) {
-                else -> Log.d(TAG, "Unexpected accuracy changed event of type ${sensor.type}")
+            if (sensor.type != Sensor.TYPE_ROTATION_VECTOR) return
+            val needsCalibration = accuracy == SensorManager.SENSOR_STATUS_UNRELIABLE ||
+                accuracy == SensorManager.SENSOR_STATUS_ACCURACY_LOW
+            if (needsCalibration && !calibrationHintShown) {
+                calibrationHintShown = true
+                Toast.makeText(this@MainActivity, R.string.calibrate_compass, Toast.LENGTH_LONG).show()
+            } else if (!needsCalibration) {
+                calibrationHintShown = false
             }
         }
         
@@ -127,11 +176,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
 
         private fun updateCompass(event: SensorEvent) {
-            val rotationVector = RotationVector(event.values[0], event.values[1], event.values[2])
+            val rotationVector = RotationVector(event.values)
             val displayRotation = getDisplayRotation()
-            val magneticAth = MathUtils.calculateCoordinates(rotationVector, displayRotation)
-            setDegree(magneticAth)
-
+            val magneticAth = if (viewModel.hasLocation) {
+                MathUtils.calculateCoordinates(rotationVector, displayRotation)
+            } else {
+                MathUtils.calculateLegacyCoordinates(rotationVector, displayRotation)
+            }
+            viewModel.updateMagneticAzimuth(magneticAth.degrees)
         }
 
         private fun getDisplayRotation(): DisplayRotation {
@@ -153,8 +205,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
     }
 
-    internal fun setDegree(coordinates: Coordinates) {
-        viewModel.coordinates.value = coordinates
+    companion object {
+        private const val PREFS_NAME = "compass_prefs"
+        private const val KEY_COMPASS_STYLE = "compass_style"
     }
-    
 }

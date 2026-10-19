@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Compass</string>
+    <string name="rate_app">I-rate ang app</string>
+    <string name="calibrate_compass">Igalaw ang iyong telepono na parang numero 8 para i-calibrate ang compass</string>
+    <string name="compass_style_classic">Klasiko</string>
+    <string name="compass_style_dark">Madilim na Ginto</string>
+    <string name="compass_style_nautical">Pandagat</string>
+    <string name="compass_style_neon">Neon</string>
+    <string name="compass_style_forest">Gubat</string>
+    <string name="compass_style_ocean">Karagatan</string>
+    <string name="compass_style_sunset">Paglubog ng Araw</string>
+    <string name="compass_style_royal">Maharlika</string>
+    <string name="compass_style_military">Militar</string>
+    <string name="compass_style_ice">Yelo</string>
+    <string name="direction_north">H</string>
+    <string name="direction_east">S</string>
+    <string name="direction_south">T</string>
+    <string name="direction_west">K</string>
+    <string name="des_direction_north">Hilaga</string>
+    <string name="des_direction_northeast">Hilagang-silangan</string>
+    <string name="des_direction_east">Silangan</string>
+    <string name="des_direction_southeast">Timog-silangan</string>
+    <string name="des_direction_south">Timog</string>
+    <string name="des_direction_southwest">Timog-kanluran</string>
+    <string name="des_direction_west">Kanluran</string>
+    <string name="des_direction_northwest">Hilagang-kanluran</string>
+    <string name="sensor_accuracy_no_contact">Hindi available ang sensor</string>
+    <string name="sensor_accuracy_unreliable">Hindi maaasahan ang mga value ng sensor</string>
+    <string name="sensor_accuracy_low">Mababang katumpakan</string>
+    <string name="sensor_accuracy_medium">Katamtamang katumpakan</string>
+    <string name="sensor_accuracy_high">Pinakamataas na katumpakan</string>
+</resources>

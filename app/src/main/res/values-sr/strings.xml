@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Компас</string>
+    <string name="rate_app">Оцени апликацију</string>
+    <string name="calibrate_compass">Померајте телефон у облику броја 8 да бисте калибрисали компас</string>
+    <string name="compass_style_classic">Класичан</string>
+    <string name="compass_style_dark">Тамно злато</string>
+    <string name="compass_style_nautical">Наутички</string>
+    <string name="compass_style_neon">Неон</string>
+    <string name="compass_style_forest">Шума</string>
+    <string name="compass_style_ocean">Океан</string>
+    <string name="compass_style_sunset">Залазак сунца</string>
+    <string name="compass_style_royal">Краљевски</string>
+    <string name="compass_style_military">Војни</string>
+    <string name="compass_style_ice">Лед</string>
+    <string name="direction_north">С</string>
+    <string name="direction_east">И</string>
+    <string name="direction_south">Ј</string>
+    <string name="direction_west">З</string>
+    <string name="des_direction_north">Север</string>
+    <string name="des_direction_northeast">Североисток</string>
+    <string name="des_direction_east">Исток</string>
+    <string name="des_direction_southeast">Југоисток</string>
+    <string name="des_direction_south">Југ</string>
+    <string name="des_direction_southwest">Југозапад</string>
+    <string name="des_direction_west">Запад</string>
+    <string name="des_direction_northwest">Северозапад</string>
+    <string name="sensor_accuracy_no_contact">Сензор није доступан</string>
+    <string name="sensor_accuracy_unreliable">Вредности сензора нису поуздане</string>
+    <string name="sensor_accuracy_low">Ниска прецизност</string>
+    <string name="sensor_accuracy_medium">Средња прецизност</string>
+    <string name="sensor_accuracy_high">Максимална прецизност</string>
+</resources>

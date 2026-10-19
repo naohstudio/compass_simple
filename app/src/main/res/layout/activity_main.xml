@@ -22,6 +22,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchDarkMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:contentDescription="@string/dark_mode"
+            android:saveEnabled="false"
+            android:theme="@style/Theme.Material3.DayNight.NoActionBar"
+            app:thumbIcon="@drawable/ic_theme_mode_thumb"
+            app:thumbIconTint="@color/switch_mode_icon"
+            app:thumbTint="@color/switch_mode_thumb"
+            app:trackTint="@color/switch_mode_track"
+            app:trackDecorationTint="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.naohstudio.compass.feature.view.CompassView

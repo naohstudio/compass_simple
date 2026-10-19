@@ -30,4 +30,5 @@
     <string name="sensor_accuracy_low">Nízká přesnost</string>
     <string name="sensor_accuracy_medium">Střední přesnost</string>
     <string name="sensor_accuracy_high">Maximální přesnost</string>
+    <string name="dark_mode">Tmavý režim</string>
 </resources>

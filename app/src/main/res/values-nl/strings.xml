@@ -30,4 +30,5 @@
     <string name="sensor_accuracy_low">Lage nauwkeurigheid</string>
     <string name="sensor_accuracy_medium">Gemiddelde nauwkeurigheid</string>
     <string name="sensor_accuracy_high">Maximale nauwkeurigheid</string>
+    <string name="dark_mode">Donkere modus</string>
 </resources>

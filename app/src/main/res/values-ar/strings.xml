@@ -30,4 +30,5 @@
     <string name="sensor_accuracy_low">دقة منخفضة</string>
     <string name="sensor_accuracy_medium">دقة متوسطة</string>
     <string name="sensor_accuracy_high">أعلى دقة</string>
+    <string name="dark_mode">الوضع الداكن</string>
 </resources>

@@ -30,4 +30,5 @@
     <string name="sensor_accuracy_low">कम सटीकता</string>
     <string name="sensor_accuracy_medium">मध्यम सटीकता</string>
     <string name="sensor_accuracy_high">अधिकतम सटीकता</string>
+    <string name="dark_mode">डार्क मोड</string>
 </resources>

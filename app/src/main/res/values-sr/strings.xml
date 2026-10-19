@@ -30,4 +30,5 @@
     <string name="sensor_accuracy_low">Ниска прецизност</string>
     <string name="sensor_accuracy_medium">Средња прецизност</string>
     <string name="sensor_accuracy_high">Максимална прецизност</string>
+    <string name="dark_mode">Тамни режим</string>
 </resources>

@@ -30,4 +30,5 @@
     <string name="sensor_accuracy_low">Precisão baixa</string>
     <string name="sensor_accuracy_medium">Precisão média</string>
     <string name="sensor_accuracy_high">Precisão máxima</string>
+    <string name="dark_mode">Modo escuro</string>
 </resources>

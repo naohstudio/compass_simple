@@ -3,6 +3,7 @@
     <!--    Translatable-->
     <string name="app_name">Compass</string>
     <string name="rate_app">Rate app</string>
+    <string name="dark_mode">Dark mode</string>
     <string name="calibrate_compass">Move your phone in a figure 8 to calibrate the compass</string>
     <string name="compass_style_classic">Classic</string>
     <string name="compass_style_dark">Dark Gold</string>

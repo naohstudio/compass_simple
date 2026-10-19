@@ -3,6 +3,8 @@ package com.naohstudio.compass.feature.home
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -15,6 +17,7 @@ import android.view.Display
 import android.view.Surface
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.core.app.ActivityCompat
 import com.naohstudio.compass.coreproject.base.BannerHelper
@@ -50,6 +53,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun initConfig(savedInstanceState: Bundle?) {
         super.initConfig(savedInstanceState)
+        initDarkMode()
         initCompassStyle()
         val googleMobileAdsConsentManager = GoogleMobileAdsConsentManager.getInstance(this)
         googleMobileAdsConsentManager.gatherConsent(this) {
@@ -96,6 +100,30 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             linkAppStore()
         }
     }
+
+    private fun initDarkMode() {
+        // When the device switches light/dark, drop the user's manual choice and follow the device again
+        val systemNight = isSystemInNightMode()
+        if (lastSystemNight != null && lastSystemNight != systemNight) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        }
+        lastSystemNight = systemNight
+
+        binding.switchDarkMode.isChecked = isAppInNightMode()
+        binding.switchDarkMode.setOnCheckedChangeListener { _, isChecked ->
+            // Only react to a real toggle, not to state being restored or synced on recreation
+            if (isChecked == isAppInNightMode()) return@setOnCheckedChangeListener
+            AppCompatDelegate.setDefaultNightMode(
+                if (isChecked) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+            )
+        }
+    }
+
+    private fun isSystemInNightMode(): Boolean =
+        Resources.getSystem().configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
+
+    private fun isAppInNightMode(): Boolean =
+        resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
 
     private fun initCompassStyle() {
         val savedStyle = getSavedCompassStyle()
@@ -206,6 +234,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     companion object {
+        // Device night mode seen at the last (re)creation, kept for the process lifetime only
+        private var lastSystemNight: Boolean? = null
+
         private const val PREFS_NAME = "compass_prefs"
         private const val KEY_COMPASS_STYLE = "compass_style"
     }

@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.naohstudio.compassfree"
-        minSdk = 23
+        minSdk = 24
         targetSdk = 36
         versionCode = 114
         versionName = "1.1.4"

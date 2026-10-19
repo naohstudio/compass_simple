@@ -30,4 +30,5 @@
     <string name="sensor_accuracy_low">Düşük doğruluk</string>
     <string name="sensor_accuracy_medium">Orta doğruluk</string>
     <string name="sensor_accuracy_high">En yüksek doğruluk</string>
+    <string name="dark_mode">Karanlık mod</string>
 </resources>

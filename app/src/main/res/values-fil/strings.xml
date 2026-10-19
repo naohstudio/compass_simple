@@ -30,4 +30,5 @@
     <string name="sensor_accuracy_low">Mababang katumpakan</string>
     <string name="sensor_accuracy_medium">Katamtamang katumpakan</string>
     <string name="sensor_accuracy_high">Pinakamataas na katumpakan</string>
+    <string name="dark_mode">Dark mode</string>
 </resources>

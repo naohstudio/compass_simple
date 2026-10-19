@@ -29,6 +29,8 @@ class CompassView(context: Context, attributes: AttributeSet) : ConstraintLayout
 
     private var lastHapticFeedbackPoint: Coordinates? = null
 
+    private var lastDegree: Float? = null
+
     private var binding: CompassViewBinding
 
     init {
@@ -57,11 +59,20 @@ class CompassView(context: Context, attributes: AttributeSet) : ConstraintLayout
 
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
         super.onSizeChanged(width, height, oldWidth, oldHeight)
-        visibility = INVISIBLE
         updateStatusDegreesTextSize(width * getFloat(R.dimen.status_degrees_text_size_factor))
         updateStatusCardinalDirectionTextSize(width * getFloat(R.dimen.status_direction_text_size_factor))
         updateCardinalDirectionTextSize(width * getFloat(R.dimen.direction_text_size_factor))
         updateDegreeTextSize(width * getFloat(R.dimen.degree_text_size_factor))
+
+        // Size changes (e.g. a collapsible banner expanding) need the rose texts re-laid out at the
+        // new radius. Re-apply the last heading instead of hiding the view until the next sensor
+        // update, which may never come while the phone is still.
+        val degree = lastDegree
+        if (degree == null) {
+            visibility = INVISIBLE
+        } else {
+            post { setDegree(degree) }
+        }
     }
 
     private fun updateStatusDegreesTextSize(textSize: Float) {
@@ -95,6 +106,7 @@ class CompassView(context: Context, attributes: AttributeSet) : ConstraintLayout
     }
 
     fun setDegree(value: Float) {
+        lastDegree = value
         val coordinates = Coordinates(value)
 
         updateStatusDegreesText(coordinates)

@@ -30,4 +30,5 @@
     <string name="sensor_accuracy_low">精度低</string>
     <string name="sensor_accuracy_medium">精度中等</string>
     <string name="sensor_accuracy_high">精度最高</string>
+    <string name="dark_mode">深色模式</string>
 </resources>

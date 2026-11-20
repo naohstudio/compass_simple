@@ -41,7 +41,8 @@ Other notes:
 - Light/dark: `values-night/` resources plus an in-app switch using `AppCompatDelegate`; the manual choice is reset to follow-system when the device's night mode changes (tracked in a process-lifetime companion field).
 - Ads: `Ads.getBannerAds()` returns the Google test ID in debug and the real unit ID in release; `BannerHelper` loads an adaptive banner only after `GoogleMobileAdsConsentManager.gatherConsent` and when `canRequestAds`.
 - Hilt is a dependency and `MainActivity` has `@AndroidEntryPoint`, but the Hilt Gradle plugin, kapt compiler, and `@HiltAndroidApp` Application are not set up — DI is effectively unused. Wire it up fully before relying on injection.
-- Java/JVM target 1.8, Kotlin 1.9.0, AGP 8.12, compile/target SDK 36, min SDK 24.
+- Java/JVM target 1.8, AGP 9.5 with built-in Kotlin (no `kotlin-android`/kapt plugins), Gradle 9.9, compile/target SDK 36, min SDK 24.
+- R8 runs in strict full mode with optimized resource shrinking (AGP 9 defaults). Old transitive libraries can lose reflectively-created classes — `androidx.work:work-runtime` is pinned for this reason (the ads SDK's WorkManager 2.7 crashed release on start). Always smoke-test a minified release build after dependency/AGP changes.
 
 ## Localization
 

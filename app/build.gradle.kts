@@ -1,8 +1,5 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id ("kotlin-kapt")
-    id ("kotlin-parcelize")
 }
 
 android {
@@ -13,8 +10,8 @@ android {
         applicationId = "com.naohstudio.compassfree"
         minSdk = 24
         targetSdk = 36
-        versionCode = 114
-        versionName = "1.1.4"
+        versionCode = 116
+        versionName = "1.1.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -39,9 +36,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
     }
     buildFeatures {
         buildConfig = true
@@ -79,8 +73,11 @@ dependencies {
 
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
-    implementation("com.google.android.gms:play-services-ads:22.6.0")
+    implementation("com.google.android.gms:play-services-ads:25.5.0")
+    // play-services-ads (still as of 25.5.0) pulls WorkManager 2.7.0, whose keep rules are too weak for
+    // R8 strict full mode (default since AGP 9) and the release build crashes on start. Force a modern version.
+    implementation("androidx.work:work-runtime:2.12.0")
     implementation("com.facebook.shimmer:shimmer:0.5.0")
 
-    implementation ("com.google.android.ump:user-messaging-platform:2.1.0")
+    implementation ("com.google.android.ump:user-messaging-platform:4.0.0")
 }

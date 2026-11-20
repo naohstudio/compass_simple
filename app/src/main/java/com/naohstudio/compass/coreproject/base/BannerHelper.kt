@@ -40,7 +40,7 @@ class BannerHelper( private val activity: BaseActivity<*>) {
 
         val adWidth = (adWidthPixels / density).toInt()
 
-        adSize = AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(activity, adWidth)
+        adSize = AdSize.getLargeAnchoredAdaptiveBannerAdSize(activity, adWidth)
         adView = AdView(activity)
 
         adView?.adListener = object : AdListener() {

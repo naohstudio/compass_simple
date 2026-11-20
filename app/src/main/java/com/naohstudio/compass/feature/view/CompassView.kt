@@ -59,10 +59,12 @@ class CompassView(context: Context, attributes: AttributeSet) : ConstraintLayout
 
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
         super.onSizeChanged(width, height, oldWidth, oldHeight)
-        updateStatusDegreesTextSize(width * getFloat(R.dimen.status_degrees_text_size_factor))
-        updateStatusCardinalDirectionTextSize(width * getFloat(R.dimen.status_direction_text_size_factor))
-        updateCardinalDirectionTextSize(width * getFloat(R.dimen.direction_text_size_factor))
-        updateDegreeTextSize(width * getFloat(R.dimen.degree_text_size_factor))
+        // The rose is square and fits the shorter side (height on tablets), so scale everything from it
+        val size = compassSize
+        updateStatusDegreesTextSize(size * getFloat(R.dimen.status_degrees_text_size_factor))
+        updateStatusCardinalDirectionTextSize(size * getFloat(R.dimen.status_direction_text_size_factor))
+        updateCardinalDirectionTextSize(size * getFloat(R.dimen.direction_text_size_factor))
+        updateDegreeTextSize(size * getFloat(R.dimen.degree_text_size_factor))
 
         // Size changes (e.g. a collapsible banner expanding) need the rose texts re-laid out at the
         // new radius. Re-apply the last heading instead of hiding the view until the next sensor
@@ -174,8 +176,12 @@ class CompassView(context: Context, attributes: AttributeSet) : ConstraintLayout
         return tempValue.float
     }
 
+    private val compassSize: Int
+        get() = minOf(width, height)
+
     private fun calculateTextRadius(ratio: Float): Int {
-        return width / 2 - (width * ratio).toInt()
+        val size = compassSize
+        return size / 2 - (size * ratio).toInt()
     }
 
     private fun handleHapticFeedback(coordinates: Coordinates) {
